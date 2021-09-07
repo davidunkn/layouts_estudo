@@ -1,0 +1,201 @@
+/* Estrutura da página */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: rgb(72, 180, 255);
+    font-family: 'Lato', sans-serif;
+}
+
+#site {
+    background: #fff;
+}
+/* Cabeçalho */
+header #logo {
+    margin: 0.5em 1em;
+    float: left;
+}
+header #logo #quadrado {
+    width: 50px;
+    height: 50px;
+    background:rgb(72, 180, 255);
+    border-radius: 0.5em;
+    display: inline-block;
+    vertical-align: middle;
+}
+header #logo h3 {
+    display: inline-block;
+    font-size: 2.2em;
+    margin-left: 0.7em;
+    vertical-align: middle;
+}
+/* Navbar */
+header nav {
+    float: right;
+    margin: 1.5em 1.7em 0em 0em;
+}
+header nav button {
+    margin-top: 1em;
+    background: none;
+    border: none;
+    font-size: 1.6em;
+    cursor: pointer;
+}
+header nav ul {
+    display: none;
+}
+header nav ul.show {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    background: #fff;
+}
+header nav ul li {
+    display: block;
+    list-style-type: none;
+    font-weight: bold;
+    margin: 1.5em 1.5em;
+    text-align: center;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    margin: 0.5em 1.5em;
+    color: #000;
+}
+header nav ul li.active, header nav ul li:hover {
+    background:rgb(72, 180, 255);
+    padding: 0.3em 0em;
+    border-radius: 1em;
+}
+header nav ul li.active a,header nav ul li:hover a {color: #fff;}
+
+/* Meio do site / conteudo */
+main #conteudo {
+    margin: 0 1.5em;
+}
+main #conteudo h1 {
+    font-size: 3em;
+    margin: 0.5em 0em 0em 0em;
+    color: #555;
+}
+main #conteudo h2 {
+    font-size: 2em;
+    margin: 0;
+    color: #555;
+}
+main #conteudo p {
+    text-align: justify;
+    font-size: 0.9em;
+}
+main #miniatura {
+    text-align: center;
+    margin-right: 3em;
+}
+main #miniatura img {
+    width: 100%;
+    height: auto;
+}
+main #conteudo button {
+    background:rgb(72, 180, 255);
+    border: none;
+    border-radius: 2em;
+    padding: 1em 3em;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+/* Rodapé */
+footer {
+    margin: 1.5em 0em;
+    font-size: 0.8em;
+    text-align: center;
+}
+/* Utils */
+.clear {
+    clear:both;
+}
+
+/* Media queries // Responsividade */
+@media (min-width: 768px) { 
+    body {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    #site {
+        width: 90%;
+        border-radius: 3em;
+    }
+    header #logo {
+        margin-left: 1.5em;
+    }
+    header nav {
+        margin: 1.5em 1.7em 0em 0em;
+    }
+    header nav button {
+        display: none;
+    }
+    header nav ul {
+        display: block;
+    }
+    header nav ul li {
+        display: inline-block;
+        list-style-type: none;
+        font-weight: bold;
+        margin: 1em 0em;
+        text-align: center;
+        font-size: 0.8em;
+    }
+    main #conteudo {
+        float: left;
+        width: 45%;
+    }
+    main #miniatura {
+        float: right;
+        width: 40%;
+    }
+}
+
+@media (min-width: 992px) { 
+    #site {
+        width: 90%;
+        border-radius: 3em;
+    }
+    main #conteudo {
+        float: left;
+        width: 45%;
+    }
+    main #miniatura {
+        float: right;
+        width: 42%;
+    }
+    header nav ul li {
+        display: inline-block;
+        list-style-type: none;
+        font-weight: bold;
+        margin: 1em 0em;
+        text-align: center;
+        font-size: 1em;
+    }
+}
+
+@media (min-width: 1200px) { 
+
+    #site {
+        max-width: 1200px;
+    }
+
+    header #logo {
+        margin-left: 3em;
+    }
+    main #conteudo {
+        margin-top: 5em;
+        margin-left: 3em;
+    }
+
+}
