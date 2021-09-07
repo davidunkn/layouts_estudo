@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage</title>
+    <link rel="stylesheet" href="app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <section id="site">
+        <!-- Cabecalho -->
+        <header>
+            <!-- Logo -->
+            <div id="logo">
+                <div id="quadrado"></div>
+                <h3>Logo</h3>
+            </div>
+            <!-- Menu -->
+            <nav>
+                <button id="toggle" aria-label="Menu Toggle"><i aria-label="Menu Toggle" class="fas fa-bars"></i></button>
+                <ul id="menu">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Serviços</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li class="active"><a href="#">Inscreva-se</a></li>
+                </ul>
+            </nav>
+            <div class="clear"></div>
+        </header>
+
+        <main>
+            <!-- Conteúdo do site -->
+            <article id="miniatura">
+                <img src="icone.jpg" alt="Homem tendo uma ideia">
+                <!-- 
+                    Icon https://www.freepik.com/premium-vector/businessman-with-creative-vector-illustration_4320330.htm
+                 -->
+            </article>
+            <article id="conteudo">
+                <h1>Cabeçalho 1</h1>
+                <h2>Cabeçalho 2</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio iusto molestiae, ipsa asperiores
+                    consectetur aliquid harum nam! Non asperiores perferendis autem quisquam aspernatur nostrum eligendi
+                    quibusdam labore eveniet, sequi amet!
+                    Eveniet itaque et dolorum, consequuntur autem iure at nihil corporis impedit nesciunt asperiores
+                    praesentium consequatur, commodi distinctio. Vero necessitatibus quia suscipit ut rem, veniam
+                    impedit quidem sapiente ullam inventore quod?</p>
+                <button>Botão</button>
+            </article>
+            <div class="clear"></div>
+        </main>
+
+        <footer>
+            <!-- Rodape da página -->
+            Criado por <a href="https://github.com/davidunkn">davidh.</a>
+        </footer>
+    </section>
+
+    <script type="text/javascript">
+        let toggleBtn = document.getElementById("toggle");
+        toggleBtn.addEventListener('click', function(){
+            let menu = document.getElementById("menu");
+            if(menu.classList.contains('show')){
+                menu.classList.remove('show');
+            }else{
+                menu.classList.add('show');
+            }
+        });
+
+    </script>
+</body>
+
+</html>
